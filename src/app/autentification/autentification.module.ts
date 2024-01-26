@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { GroupComponent } from './group/group.component';
+import { AutentificationRoutingModule } from './autentification-routing.module';
 
 
 
@@ -13,7 +14,8 @@ import { GroupComponent } from './group/group.component';
     GroupComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AutentificationRoutingModule
   ]
 })
 export class AutentificationModule { }

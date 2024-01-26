@@ -1,6 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ComponentsModule } from '../components/components.module';
+import { PrincipalRoutingModule } from './principal-routing.module';
 
 
 
@@ -8,7 +9,8 @@ import { ComponentsModule } from '../components/components.module';
   declarations: [],
   imports: [
     CommonModule,
-    ComponentsModule
+    ComponentsModule,
+    PrincipalRoutingModule
   ]
 })
 export class PrincipalModule { }

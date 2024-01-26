@@ -1,7 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+
+
+const routes: Routes = [
+  // Define your routes here
+  { path: 'login', loadChildren: () => import('./autentification/autentification.module').then(m => m.AutentificationModule) },
+  { path: 'home', loadChildren: () => import('./principal/principal.module').then(m => m.PrincipalModule) },
+   { path: '**', redirectTo: 'login', pathMatch: 'full' },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
