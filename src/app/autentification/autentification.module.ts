@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { GroupComponent } from './group/group.component';
 import { AutentificationRoutingModule } from './autentification-routing.module';
+import { ComponentsModule } from '../components/components.module';
 
 
 
@@ -15,7 +16,8 @@ import { AutentificationRoutingModule } from './autentification-routing.module';
   ],
   imports: [
     CommonModule,
-    AutentificationRoutingModule
+    AutentificationRoutingModule,
+    ComponentsModule
   ]
 })
 export class AutentificationModule { }
