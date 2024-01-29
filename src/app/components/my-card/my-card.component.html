@@ -1,1 +1,19 @@
 <p>my-card works!</p>
+
+<div class="card" style="width: 18rem">
+  <div class="card-image-container">
+    <img
+      class="card-img-top"
+      [src]="game ? game.image : '../../../assets/images/cars/blue-car-front.png'"
+      alt="Imagen no disponible"
+    />
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{ game ? game.title : "Sin nombre" }}</h5>
+    <p class="card-text">
+      {{ (game ? game.description : "Sin descripción") | slice : 1 : 150 }} ...
+    </p>
+    <button href="#" class="btn btn-primary">Comprar</button>
+    <button href="#" class="btn btn-secondary ml-3">No me interesa</button>
+  </div>
+</div>

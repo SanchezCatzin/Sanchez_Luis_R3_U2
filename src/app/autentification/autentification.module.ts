@@ -5,19 +5,15 @@ import { SignupComponent } from './signup/signup.component';
 import { GroupComponent } from './group/group.component';
 import { AutentificationRoutingModule } from './autentification-routing.module';
 import { ComponentsModule } from '../components/components.module';
-
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    LoginComponent,
-    SignupComponent,
-    GroupComponent
-  ],
+  declarations: [LoginComponent, SignupComponent, GroupComponent],
   imports: [
+    ReactiveFormsModule,
     CommonModule,
     AutentificationRoutingModule,
-    ComponentsModule
-  ]
+    ComponentsModule,
+  ],
 })
-export class AutentificationModule { }
+export class AutentificationModule {}

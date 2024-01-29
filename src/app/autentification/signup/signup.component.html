@@ -1,1 +1,53 @@
-<p>signup works!</p>
+<div class="text-center signup-container">
+  <div class="form-signup" [formGroup]="group">
+    <img
+      src="../assets/images/user.svg"
+      alt="user"
+      class="mb-4"
+      width="72"
+      height="72"
+    />
+    <h1 class="h3 mb-3 font-italic">Registrarse</h1>
+
+    <label for="inputName" class="sr-only"> Nombre </label>
+    <input
+      type="text"
+      id="inputName"
+      class="form-control"
+      placeholder="Nombre"
+      formControlName="name"
+    />
+
+    <label for="inputEmail" class="sr-only"> Correo </label>
+    <input
+      type="email"
+      id="inputEmail"
+      class="form-control"
+      placeholder="Correo"
+      formControlName="email"
+    />
+
+    <label for="inputPassword" class="sr-only"> Contraseña </label>
+    <input
+      type="password"
+      id="inputPassword"
+      class="form-control"
+      placeholder="Contraseña"
+      formControlName="password"
+    />
+
+    <label for="inputConfirmPassword" class="sr-only">
+      Confirmar contraseña
+    </label>
+    <input
+      type="password"
+      id="inputConfirmPassword"
+      class="form-control"
+      placeholder="Confirmar contraseña"
+      formControlName="confirmPassword"
+    />
+
+    <button class="btn btn-lg btn-secondary" (click)="onSignIn()">Registrarse</button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2020</p>
+  </div>
+</div>

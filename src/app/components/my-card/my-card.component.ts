@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { IGame } from '../../interfaces/game.interface.ts/game.interface';
 
 @Component({
   selector: 'app-my-card',
@@ -6,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './my-card.component.scss',
 })
 export class MyCardComponent implements OnInit {
+  @Input() game!: IGame;
+
   constructor() {}
+  
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
