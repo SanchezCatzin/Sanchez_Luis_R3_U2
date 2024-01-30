@@ -24,20 +24,34 @@
       </li>
       <li
         class="nav-item"
+        [routerLink]="['/', 'home', 'game-popular']"
+        routerLinkActive="router-link-active"
+      >
+        <a class="nav-link">Mas Populares</a>
+      </li>
+      <li
+        class="nav-item"
+        [routerLink]="['/', 'home', 'game-more-downloaded']"
+        routerLinkActive="router-link-active"
+      >
+        <a class="nav-link">Mas Descargados</a>
+      </li>
+      <li
+        class="nav-item"
+        [routerLink]="['/', 'home', 'game-comming-soon']"
+        routerLinkActive="router-link-active"
+      >
+        <a class="nav-link">Proximamente</a>
+      </li>
+      <li
+        class="nav-item"
         [routerLink]="['/', 'home', 'game-add']"
         routerLinkActive="router-link-active"
       >
         <a class="nav-link">Agregar Juego</a>
       </li>
-      <li
-        class="nav-item"
-        [routerLink]="['/', 'home', 'game-list']"
-        routerLinkActive="router-link-active"
-      >
-        <a class="nav-link">Lista de Juegos</a>
-      </li>
       <li class="nav-item" (click)="onSalir()">
-        <a class="nav-link">salir</a>
+        <a class="nav-link">Salir</a>
       </li>
     </ul>
   </div>

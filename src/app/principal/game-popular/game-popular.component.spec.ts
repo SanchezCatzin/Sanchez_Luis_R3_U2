@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProgressBarComponent } from './progress-bar.component';
+import { GamePopularComponent } from './game-popular.component';
 
-describe('ProgressBarComponent', () => {
-  let component: ProgressBarComponent;
-  let fixture: ComponentFixture<ProgressBarComponent>;
+describe('GamePopularComponent', () => {
+  let component: GamePopularComponent;
+  let fixture: ComponentFixture<GamePopularComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ProgressBarComponent]
+      declarations: [GamePopularComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(ProgressBarComponent);
+    fixture = TestBed.createComponent(GamePopularComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
