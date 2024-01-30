@@ -10,8 +10,6 @@ export class MyCardComponent implements OnInit {
   @Input() game!: IGame;
 
   constructor() {}
-  
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+
+  ngOnInit(): void {}
 }
