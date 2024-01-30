@@ -12,9 +12,9 @@ export class PrincipalService {
         'Grand Theft Auto V es un videojuego de acción-aventura de mundo abierto desarrollado por la compañía británica Rockstar North y distribuido por Rockstar Games.',
       releaseDate: '29/01/2024',
       image: 'assets/images/games/GTAV.png',
-      rating: 4,
+      rating: 5,
       downloads: 120000,
-      commingSoon: true,
+      comingSoon: true,
     },
     {
       title: 'Among Us',
@@ -24,7 +24,7 @@ export class PrincipalService {
       image: 'assets/images/games/amongus.jpg',
       rating: 3,
       downloads: 13000000,
-      commingSoon: false,
+      comingSoon: true,
     },
     {
       title: 'Minecraft',
@@ -32,9 +32,9 @@ export class PrincipalService {
         'Minecraft es un videojuego de construcción, de tipo «mundo abierto» o sandbox creado originalmente por el sueco Markus Persson,​ y posteriormente desarrollado por su empresa, Mojang Studios.',
       releaseDate: '29/01/2024',
       image: 'assets/images/games/minecraft.png',
-      rating: 4,
+      rating: 5,
       downloads: 100000000,
-      commingSoon: false,
+      comingSoon: false,
     },
     {
       title: 'Fortnite',
@@ -44,7 +44,7 @@ export class PrincipalService {
       image: 'assets/images/games/fornite.jpg',
       rating: 2,
       downloads: 9500000,
-      commingSoon: false,
+      comingSoon: false,
     },
     {
       title: 'Call of Duty: Warzone',
@@ -53,8 +53,8 @@ export class PrincipalService {
       releaseDate: '10/03/2020',
       image: 'assets/images/games/codwarzone.png',
       rating: 4,
-      downloads: 10000000252,
-      commingSoon: true,
+      downloads: 100,
+      comingSoon: true,
     },
     {
       title: 'League of Legends',
@@ -63,10 +63,30 @@ export class PrincipalService {
       releaseDate: '29/01/2013',
       image: 'assets/images/games/LOL.svg.png',
       rating: 2,
-      downloads: 1000000000,
-      commingSoon: false,
+      downloads: 99,
+      comingSoon: false,
     },
   ];
 
   constructor() {}
+
+  getGames(): IGame[] {
+    return this.games;
+  }
+
+  addGame(game: IGame): void {
+    this.games.push(game);
+  }
+
+  getMorePopular(): IGame[] {
+    return this.games.filter((game) => game.rating > 4);
+  }
+
+  getComingSoon(): IGame[] {
+    return this.games.filter((game) => game.comingSoon);
+  }
+
+  getMoreDownloaded(): IGame[] {
+    return this.games.filter((game) => game.downloads > 100);
+  }
 }

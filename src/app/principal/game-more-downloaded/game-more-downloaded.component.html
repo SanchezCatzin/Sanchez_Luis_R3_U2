@@ -1,2 +1,5 @@
 <app-navbar></app-navbar>
-<p>game-more-downloaded works!</p>
+
+<div class="car-container">
+  <app-my-card *ngFor="let game of games" [game]="game"></app-my-card>
+</div>

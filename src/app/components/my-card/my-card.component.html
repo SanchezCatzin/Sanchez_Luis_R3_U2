@@ -2,16 +2,30 @@
   <div class="card-image-container">
     <img
       class="card-img-top"
-      [src]="game ? game.image : '../../../assets/images/cars/blue-car-front.png'"
+      [src]="
+        game ? game.image : '../../../assets/images/cars/blue-car-front.png'
+      "
       alt="Imagen no disponible"
     />
   </div>
   <div class="card-body">
     <h5 class="card-title">{{ game ? game.title : "Sin nombre" }}</h5>
     <p class="card-text">
-      {{ (game ? game.description : "Sin descripción") | slice : 1 : 150 }} ...
+      {{ (game ? game.description : "Sin descripción") | slice : 0 : 150 }} ...
     </p>
-    <button href="#" class="btn btn-primary">Comprar</button>
-    <button href="#" class="btn btn-secondary ml-3">No me interesa</button>
+    <p class="card-downloads">
+      Descargas: {{ game ? game.downloads : "Sin descargas" }}
+    </p>
+    <p class="card-date">
+      Fecha de lanzamiento:
+      {{ game ? game.releaseDate : "Sin fecha" }}
+    </p>
+    <p class="card-rating">Rating: {{ game ? game.rating : "Sin rating" }}/5</p>
+    <p class="card-coming-soon">
+      Proximamente:
+      <span *ngIf="game && game.comingSoon; else noComingSoon">&#10004;</span>
+      <ng-template #noComingSoon>X</ng-template>
+    </p>
+    <button class="btn btn-primary">Agregar a carrito</button>
   </div>
 </div>

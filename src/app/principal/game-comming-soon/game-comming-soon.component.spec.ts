@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GameCommingSoonComponent } from './game-comming-soon.component';
+import { GameComingSoonComponent } from './game-comming-soon.component';
 
-describe('GameCommingSoonComponent', () => {
-  let component: GameCommingSoonComponent;
-  let fixture: ComponentFixture<GameCommingSoonComponent>;
+describe('GameComingSoonComponent', () => {
+  let component: GameComingSoonComponent;
+  let fixture: ComponentFixture<GameComingSoonComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [GameCommingSoonComponent]
+      declarations: [GameComingSoonComponent]
     })
     .compileComponents();
-    
-    fixture = TestBed.createComponent(GameCommingSoonComponent);
+
+    fixture = TestBed.createComponent(GameComingSoonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

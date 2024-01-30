@@ -1,2 +1,64 @@
 <app-navbar></app-navbar>
-<p>game-add works!</p>
+<form class="form-group custom-form-container" [formGroup]="group">
+  <div class="border-2 border-black bg-green custom-div">
+    <h1 class="h3 mb-3 font-italic">Add Game</h1>
+    <label for="intputTitle" class="sr-only"> Title </label>
+    <input
+      type="text"
+      id="intputTitle"
+      class="form-control"
+      formControlName="title"
+      placeholder="Title"
+    />
+    <label for="inputDescription" class="sr-only"> Description </label>
+    <input
+      type="text"
+      id="inputDescription"
+      class="form-control"
+      formControlName="description"
+      placeholder="Description"
+    />
+    <label for="inputReleaseDate" class="sr-only"> Fecha de lanzamiento </label>
+    <input
+      type="text"
+      id="inputReleaseDate"
+      class="form-control"
+      formControlName="releaseDate"
+      placeholder="Release Date"
+    />
+    <label for="inputRating" class="sr-only"> Rating </label>
+    <input
+      type="number"
+      id="inputRating"
+      class="form-control"
+      formControlName="rating"
+      placeholder="Rating"
+    />
+    <label for="inputDownload" class="sr-only"> Descargas </label>
+    <input
+      type="number"
+      id="inputDownload"
+      class="form-control"
+      formControlName="downloads"
+      placeholder="Downloads"
+    />
+    <div class="col-12 my-3">
+      <input
+        type="checkbox"
+        id="inputComingSoon"
+        class="form-check-input"
+        formControlName="comingSoon"
+        placeholder="Coming Soon"
+      />
+      <label for="inputComingSoon" class="form-check-label mx-3">
+        Proximamente
+      </label>
+    </div>
+
+    <div class="col-12">
+      <button class="btn btn-lg btn-secondary mt-3" (click)="onAddGame()">
+        Submit
+      </button>
+    </div>
+  </div>
+</form>

@@ -2,27 +2,39 @@
   margin-bottom: 15px;
 
   .card {
-      .card-image-container {
-          max-height: 180px;
-          min-height: 180px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 5px;
-          overflow: hidden;
+    .card-image-container {
+      max-height: 180px;
+      min-height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+      overflow: hidden;
 
-          img {
-              width: 100%;
-              height: auto;
-          }
+      img {
+        width: 100%;
+        height: auto;
       }
+    }
 
-      .card-body {
-          .card-text {
-              max-height: 120px;
-              min-height: 120px;
-              overflow: hidden;
-          }
+    .card-body {
+      .card-text {
+        max-height: 120px;
+        min-height: 120px;
+        overflow: hidden;
       }
+      .card-date {
+        font-size: 0.8rem;
+        color: #999;
+      }
+      .card-rating {
+        font-size: 0.8rem;
+        color: #999;
+      }
+      .card-downloads {
+        font-size: 1rem; // tamaño de fuente normal
+        color: #333;
+      }
+    }
   }
 }

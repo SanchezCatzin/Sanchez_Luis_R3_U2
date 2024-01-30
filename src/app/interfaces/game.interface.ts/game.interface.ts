@@ -5,5 +5,5 @@ export class IGame{
   image!: string;
   rating!: number;
   downloads!: number;
-  commingSoon!: boolean;
+  comingSoon!: boolean;
 }

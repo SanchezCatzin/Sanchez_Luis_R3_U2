@@ -25,16 +25,14 @@ export class SignupComponent implements OnInit {
   onSignIn() {
     console.log('FormGroup:', this.group.value, 'Valido:', this.group.status);
     const values = this.group.value;
-    const formIsValid = this.group.valid;
-    const controlName = this.group.get('name');
-    const controlNameIsValid = this.group.get('name')!.valid;
+    const valid = this.group.status;
 
-    if (values.password == values.confirmPassword) {
+    if (values.password == values.confirmPassword && valid == 'VALID') {
       console.log('formulario válido');
       this.authService.singIn(values.name, values.email, values.password);
       this.router.navigate(['/home']);
     } else {
-      console.error('Las contraseñas no coinciden');
+      console.error('Formulario Incorrecto');
     }
   }
 }
